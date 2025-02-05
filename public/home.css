@@ -1,0 +1,405 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(195, 227, 238); /* Light blue background */
+    color: rgb(51, 51, 51); /* Dark gray text */
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container Styling */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgb(229, 241, 249); /* Light pastel green */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgb(120, 140, 160); /* Soft gray-blue background */
+    color: white;
+    padding: 12px 0;
+    animation: slideIn 0.5s ease-out;
+}
+
+.navbar .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    align-items: center;
+}
+
+/* Centering the navigation links */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center;
+    width: 100%;
+}
+
+.navbar ul li {
+    margin-left: 30px; /* Space between items */
+}
+
+.navbar ul li a {
+    color: rgb(30, 30, 30); /* Dark text color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeInText 1s ease-out;
+}
+
+.navbar ul li a:hover {
+    color: rgb(245, 124, 0); /* Warm orange on hover */
+    background-color: rgb(60, 60, 60); /* Darker background on hover */
+    border-radius: 4px;
+}
+
+/* Navbar Responsiveness for Mobile */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack the navbar links vertically */
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Main Section Styling */
+.main-section {
+    background-color: rgb(226, 250, 219); /* Light pastel green */
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.main-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-out;
+}
+
+/* Gradient Text */
+.main-section p,
+.features-list h2,
+.features-list p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, rgb(244, 94, 116), rgb(243, 156, 18), rgb(52, 152, 219));
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textGradient 5s linear infinite;
+}
+
+/* Animating the Gradient Text */
+@keyframes textGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Features List Styling */
+.features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.features-list li {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: bounceInUp 1s ease-out;
+}
+
+.features-list li:hover {
+    transform: translateY(-10px);
+}
+
+.features-list h2 {
+    font-size: 1.6rem;
+    color: rgb(51, 51, 51);
+    margin-bottom: 10px;
+}
+
+.features-list p {
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+    line-height: 1.5;
+}
+
+/* Responsive Design for Features List */
+@media (max-width: 768px) {
+    .features-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+/* Gradient Text with Linear Transition */
+.gradient-text {
+    background: linear-gradient(45deg, rgb(244, 94, 116), rgb(243, 156, 18), rgb(52, 152, 219));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 5s linear infinite;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(85, 85, 85); /* Darker gray on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Dashboard Styling */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard h1 {
+    text-align: center;
+}
+
+.dashboard .logout {
+    align-self: flex-end;
+}
+
+.dashboard .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .content > div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.dashboard .content ul {
+    margin-top: 0;
+}
+
+/* Table Styles for Reports */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(51, 51, 51); /* Dark header */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.report-link {
+    display: block;
+    background-color: rgb(76, 175, 80); /* Green color for report link */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.report-link:hover {
+    background-color: rgb(66, 139, 66); /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
